@@ -7,7 +7,10 @@ def my_all?(collection)
   array << yield(collection[i])
   i += 1 
  end
- array
+  if array.include?(false)
+    false 
+  else
+    true 
+  end 
 end
 
-my_all?([1,2,3]) {|i| i < 2}
